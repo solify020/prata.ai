@@ -1,0 +1,108 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 0 0% 98%;
+    
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    
+    --radius: 0.75rem;
+
+    /* Scrollbar colors */
+    --scrollbar-thumb: 240 5% 35%;
+    --scrollbar-thumb-hover: 240 5% 45%;
+  }
+
+  * {
+    @apply border-border selection:bg-primary/10 selection:text-primary;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased overflow-x-hidden;
+  }
+
+  html {
+    @apply overflow-x-hidden;
+  }
+
+  /* Ultra-minimal scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 4px;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+    border: none;
+  }
+
+  ::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--scrollbar-thumb));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--scrollbar-thumb-hover));
+  }
+
+  ::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+
+  /* Firefox scrollbar styling */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--scrollbar-thumb)) transparent;
+  }
+
+  /* Glass effect utilities */
+  .glass {
+    @apply backdrop-blur-xl bg-white/5 border border-white/10 shadow-[0_4px_12px_rgba(0,0,0,0.25)];
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .container {
+    @apply max-w-[1400px] md:px-6 mx-auto;
+  }
+
+  /* Mobile container to match header width */
+  .mobile-container {
+    @apply px-4 w-full md:container;
+  }
+}
