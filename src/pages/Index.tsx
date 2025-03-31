@@ -26,18 +26,18 @@ const Index = () => {
         </div>
       </section>
       <section id="pathways">
-        <div className="mobile-container mx-auto mt-16 mb-16">
-        <PathwaysSVG />
+        <div className="mx-auto mt-16 mb-16 absolute left-0 w-[100vw]">
+          <PathwaysSVG />
         </div>
       </section>
-      <div className="mobile-container mx-auto mt-16 mb-16">
+      <div className="mobile-container mx-auto mt-[50vw] mb-16">
         <h2 className="text-4xl font-bold text-center mb-12">Sömlösa Integrationer</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="w-full h-full">
             <AnimatedBeamDemo />
           </div>
           <div className="w-full h-full">
-            
+
             <IconCloudDemo />
           </div>
         </div>

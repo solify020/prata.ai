@@ -30,6 +30,12 @@
     display: none;
 }
 
+#text-first,
+#text-box-first,
+#pointer-first {
+    display: block !important;
+}
+
 .show {
     display: block;
 }

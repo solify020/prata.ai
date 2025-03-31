@@ -1,94 +1,94 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1440 389" fill="none" id=""
     data-element="svg" class="how_svg is-mob-hide">
-    <path d="M440 80L560 40V80L440 120V80Z" fill="#151515"></path>
+    <path d="M440 80L560 40V80L440 120V80Z" fill="#818181"></path>
     <rect width="40" height="40" transform="translate(160 160)" fill="#DB005F" id="rect-first"></rect>
-    <circle cx="180" cy="180" r="10" fill="#151515" id="elipse-first"></circle>
-    <rect x="200" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="240" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="80" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="1360" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="1280" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="280" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="120" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="1400" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="40" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="1320" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="320" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="360" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="400" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect width="40" height="40" transform="translate(440 160)" fill="#151515" id="rect-second-pink"
+    <circle cx="180" cy="180" r="10" fill="#818181" id="elipse-first"></circle>
+    <rect x="200" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="240" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="80" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="1360" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="1280" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="280" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="120" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="1400" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="40" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="1320" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="320" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="360" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="400" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect width="40" height="40" transform="translate(440 160)" fill="#818181" id="rect-second-pink"
         class="second-pink"></rect>
     <circle cx="460" cy="180" r="10" fill="#C238DA" id="elipse-second-pink" class="second-pink"></circle>
-    <rect x="480" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="520" y="160" width="40" height="40" fill="#151515"></rect>
+    <rect x="480" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="520" y="160" width="40" height="40" fill="#818181"></rect>
     <rect width="40" height="40" transform="translate(560 160)" fill="#C238DA" id="rect-third-pink"
         class="third-pink"></rect>
-    <circle cx="580" cy="180" r="10" fill="#151515" id="elipse-third-pink" class="third-pink"></circle>
-    <rect x="600" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="640" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="680" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="720" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="760" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="800" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="840" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="880" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="920" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="960" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect width="40" height="40" transform="translate(1000 160)" fill="#151515"
+    <circle cx="580" cy="180" r="10" fill="#818181" id="elipse-third-pink" class="third-pink"></circle>
+    <rect x="600" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="640" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="680" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="720" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="760" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="800" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="840" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="880" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="920" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="960" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect width="40" height="40" transform="translate(1000 160)" fill="#818181"
         id="rect-fourth-pink" class="fourth-pink"></rect>
     <circle cx="1020" cy="180" r="10" fill="#C238DA" id="elipse-fourth-pink" class="fourth-pink"></circle>
-    <rect x="1040" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="1080" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="1120" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="1160" y="160" width="40" height="40" fill="#151515"></rect>
-    <rect x="1200" y="160" width="40" height="40" fill="#151515"></rect>
+    <rect x="1040" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="1080" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="1120" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="1160" y="160" width="40" height="40" fill="#818181"></rect>
+    <rect x="1200" y="160" width="40" height="40" fill="#818181"></rect>
     <rect width="40" height="40" transform="translate(1240 160)" fill="#C238DA" id="rect-fifth-pink"
         class="fifth-pink"></rect>
-    <circle cx="1260" cy="180" r="10" fill="#151515" id="elipse-fifth-pink" class="fifth-pink"></circle>
+    <circle cx="1260" cy="180" r="10" fill="#818181" id="elipse-fifth-pink" class="fifth-pink"></circle>
     <rect width="40" height="40" transform="translate(560 40)" fill="#F9A900" id="rect-third-yellow"
         class="third-yellow"></rect>
-    <circle cx="580" cy="60" r="10" fill="#151515" id="elipse-third-yellow" class="third-yellow"></circle>
-    <rect x="600" y="40" width="40" height="40" fill="#151515"></rect>
-    <rect x="640" y="40" width="40" height="40" fill="#151515"></rect>
-    <rect x="680" y="40" width="40" height="40" fill="#151515"></rect>
-    <rect x="720" y="40" width="40" height="40" fill="#151515"></rect>
-    <rect width="40" height="40" transform="translate(760 40)" fill="#151515"
+    <circle cx="580" cy="60" r="10" fill="#818181" id="elipse-third-yellow" class="third-yellow"></circle>
+    <rect x="600" y="40" width="40" height="40" fill="#818181"></rect>
+    <rect x="640" y="40" width="40" height="40" fill="#818181"></rect>
+    <rect x="680" y="40" width="40" height="40" fill="#818181"></rect>
+    <rect x="720" y="40" width="40" height="40" fill="#818181"></rect>
+    <rect width="40" height="40" transform="translate(760 40)" fill="#818181"
         id="rect-fourth-yellow" class="fourth-yellow"></rect>
     <circle cx="780" cy="60" r="10" fill="#F9A900" id="elipse-fourth-yellow" class="fourth-yellow"></circle>
-    <rect x="800" y="40" width="40" height="40" fill="#151515"></rect>
-    <rect x="840" y="40" width="40" height="40" fill="#151515"></rect>
-    <rect x="880" y="40" width="40" height="40" fill="#151515"></rect>
-    <rect x="920" y="40" width="40" height="40" fill="#151515"></rect>
+    <rect x="800" y="40" width="40" height="40" fill="#818181"></rect>
+    <rect x="840" y="40" width="40" height="40" fill="#818181"></rect>
+    <rect x="880" y="40" width="40" height="40" fill="#818181"></rect>
+    <rect x="920" y="40" width="40" height="40" fill="#818181"></rect>
     <rect width="40" height="40" transform="translate(960 40)" fill="#F9A900" id="rect-fifth-yellow"
         class="fifth-yellow"></rect>
-    <circle cx="980" cy="60" r="10" fill="#151515" id="elipse-fifth-yellow" class="fifth-yellow"></circle>
+    <circle cx="980" cy="60" r="10" fill="#818181" id="elipse-fifth-yellow" class="fifth-yellow"></circle>
     <rect width="40" height="40" transform="translate(560 280)" fill="#FF5900"
         id="rect-third-orange" class="third-orange"></rect>
-    <circle cx="580" cy="300" r="10" fill="#151515" id="elipse-third-orange" class="third-orange"></circle>
-    <rect x="600" y="280" width="40" height="40" fill="#151515"></rect>
-    <rect x="640" y="280" width="40" height="40" fill="#151515"></rect>
-    <rect width="40" height="40" transform="translate(680 280)" fill="#151515"
+    <circle cx="580" cy="300" r="10" fill="#818181" id="elipse-third-orange" class="third-orange"></circle>
+    <rect x="600" y="280" width="40" height="40" fill="#818181"></rect>
+    <rect x="640" y="280" width="40" height="40" fill="#818181"></rect>
+    <rect width="40" height="40" transform="translate(680 280)" fill="#818181"
         id="rect-fourth-orange" class="fourth-orange"></rect>
     <circle cx="700" cy="300" r="10" fill="#FF5900" id="elipse-fourth-orange" class="fourth-orange"></circle>
-    <rect x="720" y="280" width="40" height="40" fill="#151515"></rect>
-    <rect x="760" y="280" width="40" height="40" fill="#151515"></rect>
+    <rect x="720" y="280" width="40" height="40" fill="#818181"></rect>
+    <rect x="760" y="280" width="40" height="40" fill="#818181"></rect>
     <rect width="40" height="40" transform="translate(800 280)" fill="#FF5900"
         id="rect-fifth-orange" class="fifth-orange"></rect>
-    <circle cx="820" cy="300" r="10" fill="#151515" id="elipse-fifth-orange" class="fifth-orange"></circle>
-    <rect x="560" width="40" height="40" fill="#151515"></rect>
-    <rect x="800" y="320" width="40" height="40" fill="#151515"></rect>
-    <rect x="560" y="200" width="40" height="40" fill="#151515"></rect>
-    <rect x="840" y="280" width="40" height="40" fill="#151515"></rect>
-    <rect x="880" y="280" width="40" height="40" fill="#151515"></rect>
-    <rect x="1240" y="120" width="40" height="40" fill="#151515"></rect>
-    <rect width="40" height="40" transform="translate(440 80)" fill="#151515"
+    <circle cx="820" cy="300" r="10" fill="#818181" id="elipse-fifth-orange" class="fifth-orange"></circle>
+    <rect x="560" width="40" height="40" fill="#818181"></rect>
+    <rect x="800" y="320" width="40" height="40" fill="#818181"></rect>
+    <rect x="560" y="200" width="40" height="40" fill="#818181"></rect>
+    <rect x="840" y="280" width="40" height="40" fill="#818181"></rect>
+    <rect x="880" y="280" width="40" height="40" fill="#818181"></rect>
+    <rect x="1240" y="120" width="40" height="40" fill="#818181"></rect>
+    <rect width="40" height="40" transform="translate(440 80)" fill="#818181"
         id="rect-second-yellow" class="second-yellow"></rect>
     <circle cx="460" cy="100" r="10" fill="#F9A900" id="elipse-second-yellow" class="second-yellow"></circle>
-    <rect x="440" y="120" width="40" height="40" fill="#151515"></rect>
-    <path d="M440 280L560 320V280L440 240V280Z" fill="#151515"></path>
-    <rect x="440" y="200" width="40" height="40" fill="#151515"></rect>
-    <rect width="40" height="40" transform="translate(440 240)" fill="#151515"
+    <rect x="440" y="120" width="40" height="40" fill="#818181"></rect>
+    <path d="M440 280L560 320V280L440 240V280Z" fill="#818181"></path>
+    <rect x="440" y="200" width="40" height="40" fill="#818181"></rect>
+    <rect width="40" height="40" transform="translate(440 240)" fill="#818181"
         id="rect-second-orange" class="second-orange"></rect>
     <circle cx="460" cy="260" r="10" fill="#FF5900" pointer="elipse-second-orange"
         class="second-orange"></circle>
