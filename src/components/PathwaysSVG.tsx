@@ -40,11 +40,10 @@ function PathwaysSVG() {
         document.addEventListener('mouseout', handleMouseLeave);
 
         const handleScroll = () => {
-            const elements = ['el-1', 'el-2', 'el-3', 'el-4', 'el-5'];
+            const elements = ['el-1','el-2', 'el-3', 'el-4', 'el-5'];
             let lastVisibleElement = null;
-            let anyVisible = false;
 
-            elements.forEach((className) => {
+            elements.forEach((className, index) => {
                 const elementGroup = document.getElementsByClassName(className);
 
                 if (elementGroup.length > 0) {
@@ -68,26 +67,17 @@ function PathwaysSVG() {
                         });
 
                         lastVisibleElement = elementGroup;
-                        anyVisible = true;
                     } else {
                         Array.from(elementGroup).forEach((element) => {
-                            element.classList.remove('mobile-show');
-                            element.classList.remove('fade-in');
-                            element.classList.add('mobile-hide');
+                            if (index != 0){
+                                element.classList.remove('mobile-show');
+                                element.classList.remove('fade-in');
+                                element.classList.add('mobile-hide');
+                            }
                         });
                     }
                 }
             });
-
-            // If no element is visible, show the first one
-            if (!anyVisible) {
-                const firstElementGroup = document.getElementsByClassName('el-1');
-                Array.from(firstElementGroup).forEach((element) => {
-                    element.classList.remove('mobile-hide');
-                    element.classList.add('mobile-show');
-                    element.classList.add('fade-in');
-                });
-            }
         };
 
         window.addEventListener('scroll', handleScroll);
