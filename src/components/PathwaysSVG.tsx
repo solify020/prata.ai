@@ -40,7 +40,7 @@ function PathwaysSVG() {
         document.addEventListener('mouseout', handleMouseLeave);
 
         const handleScroll = () => {
-            const elements = ['el-2', 'el-3', 'el-4', 'el-5'];
+            const elements = ['el-1', 'el-2', 'el-3', 'el-4', 'el-5'];
             let lastVisibleElement = null;
 
             elements.forEach((className) => {
