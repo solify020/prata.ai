@@ -4,8 +4,10 @@ import MobileTile from './tile_1.svg';
 
 function PathwaysSVG() {
     useEffect(() => {
+        var isTooltip = false;
         const handleMouseEnter = (event) => {
             const id = event.target.id;
+            isTooltip = true;
             if (id.startsWith('rect-') || id.startsWith('elipse-')) {
                 ['text-first-1', 'text-box-first-1', 'pointer-first-1'].forEach((elementId) => {
                     const element = document.getElementById(elementId);
@@ -26,6 +28,7 @@ function PathwaysSVG() {
 
         const handleMouseLeave = (event) => {
             const id = event.target.id;
+            isTooltip = false;
             if (id.startsWith('rect-') || id.startsWith('elipse-')) {
                 const identifier = id.replace(/^(rect-|elipse-)/, '');
                 ['pointer', 'text-box', 'text'].forEach((prefix) => {
@@ -40,6 +43,14 @@ function PathwaysSVG() {
         document.addEventListener('mouseout', handleMouseLeave);
 
         const handleScroll = () => {
+            if (window.innerWidth > 480 && isTooltip && document.getElementById("rect-first").getBoundingClientRect().top >= window.innerHeight) {
+                ['text-first-1', 'text-box-first-1', 'pointer-first-1'].forEach((elementId) => {
+                    const element = document.getElementById(elementId);
+                    element?.classList.remove('hide-1');
+                    element?.classList.add('always-show');
+                });
+            }
+
             const elements = ['el-1','el-2', 'el-3', 'el-4', 'el-5'];
             let lastVisibleElement = null;
 
