@@ -8,58 +8,63 @@ function PathwaysSVG() {
         const handleMouseEnter = (event) => {
             const id = event.target.id;
             if (id.startsWith("rect-") || id.startsWith("elipse-")) {
-                document.getElementById("text-first-1")?.classList.remove("always-show");
-                document.getElementById("text-box-first-1")?.classList.remove("always-show");
-                document.getElementById("pointer-first-1")?.classList.remove("always-show");
-                document.getElementById("text-first-1")?.classList.add("hide-1");
-                document.getElementById("text-box-first-1")?.classList.add("hide-1");
-                document.getElementById("pointer-first-1")?.classList.add("hide-1");
+            ["text-first-1", "text-box-first-1", "pointer-first-1"].forEach((elementId) => {
+                const element = document.getElementById(elementId);
+                element?.classList.remove("always-show");
+                element?.classList.add("hide-1");
+            });
             }
-            
-            if (id.startsWith("rect-")) {
-                const identifier = id.replace("rect-", "");
-                document.getElementById(`pointer-${identifier}`)?.classList.remove("hide");
-                document.getElementById(`text-box-${identifier}`)?.classList.remove("hide");
-                document.getElementById(`text-${identifier}`)?.classList.remove("hide");
-                document.getElementById(`pointer-${identifier}`)?.classList.add("show");
-                document.getElementById(`text-box-${identifier}`)?.classList.add("show");
-                document.getElementById(`text-${identifier}`)?.classList.add("show");
-            }
-            else if(id.startsWith("elipse-")) {
-                const identifier = id.replace("elipse-", "");
-                document.getElementById(`pointer-${identifier}`)?.classList.remove("hide");
-                document.getElementById(`text-box-${identifier}`)?.classList.remove("hide");
-                document.getElementById(`text-${identifier}`)?.classList.remove("hide"); 
-                document.getElementById(`pointer-${identifier}`)?.classList.add("show");
-                document.getElementById(`text-box-${identifier}`)?.classList.add("show");
-                document.getElementById(`text-${identifier}`)?.classList.add("show"); 
+
+            if (id.startsWith("rect-") || id.startsWith("elipse-")) {
+            const identifier = id.replace(/^(rect-|elipse-)/, "");
+            ["pointer", "text-box", "text"].forEach((prefix) => {
+                const element = document.getElementById(`${prefix}-${identifier}`);
+                element?.classList.remove("hide");
+                element?.classList.add("show");
+            });
             }
         };
 
         const handleMouseLeave = (event) => {
             const id = event.target.id;
-            if (id.startsWith("rect-")) {
-                const identifier = id.replace("rect-", "");
-                document.getElementById(`pointer-${identifier}`)?.classList.remove("show");
-                document.getElementById(`text-box-${identifier}`)?.classList.remove("show");
-                document.getElementById(`text-${identifier}`)?.classList.remove("show");
-                document.getElementById(`pointer-${identifier}`)?.classList.add("hide");
-                document.getElementById(`text-box-${identifier}`)?.classList.add("hide");
-                document.getElementById(`text-${identifier}`)?.classList.add("hide");
-            }
-            else if(id.startsWith("elipse-")) {
-                const identifier = id.replace("rect-", "");
-                document.getElementById(`pointer-${identifier}`)?.classList.remove("show");
-                document.getElementById(`text-box-${identifier}`)?.classList.remove("show");
-                document.getElementById(`text-${identifier}`)?.classList.remove("show");
-                document.getElementById(`pointer-${identifier}`)?.classList.add("hide");
-                document.getElementById(`text-box-${identifier}`)?.classList.add("hide");
-                document.getElementById(`text-${identifier}`)?.classList.add("hide");
+            if (id.startsWith("rect-") || id.startsWith("elipse-")) {
+            const identifier = id.replace(/^(rect-|elipse-)/, "");
+            ["pointer", "text-box", "text"].forEach((prefix) => {
+                const element = document.getElementById(`${prefix}-${identifier}`);
+                element?.classList.remove("show");
+                element?.classList.add("hide");
+            });
             }
         };
 
         document.addEventListener("mouseover", handleMouseEnter);
         document.addEventListener("mouseout", handleMouseLeave);
+
+        const handleScroll = () => {
+            const elements = ["el-2", "el-3", "el-4", "el-5"];
+                        
+            elements.forEach((className) => {
+                const elementGroup = document.getElementsByClassName(className);
+
+                if (elementGroup.length > 0) {
+                    const rect = elementGroup[0].getBoundingClientRect(); // Get element position
+
+                    if (rect.top <= 200 && rect.top != 0) {
+                        Array.from(elementGroup).forEach((element) => {
+                            element.classList.remove("mobile-hide");
+                            element.classList.add("mobile-show");
+                        });
+                    } else {
+                        Array.from(elementGroup).forEach((element) => {
+                            element.classList.remove("mobile-show");
+                            element.classList.add("mobile-hide");
+                        });
+                    }
+                }
+            });
+        };
+
+        window.addEventListener("scroll", handleScroll);
 
         return () => {
             document.removeEventListener("mouseover", handleMouseEnter);
@@ -69,7 +74,7 @@ function PathwaysSVG() {
 
     return (
         <div>
-            <DesktopTile></DesktopTile>
+            {window.innerWidth >= 480 ? <DesktopTile /> : <MobileTile />}
         </div>
     )
 }

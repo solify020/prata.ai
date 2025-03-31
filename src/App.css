@@ -50,6 +50,14 @@
     display: none !important;
 }
 
+.mobile-show {
+    opacity: 1;
+}
+
+.mobile-hide {
+    opacity: 0;
+}
+
 @media screen and (max-width: 479px) {
     .u-mob-show {
         display: block;
