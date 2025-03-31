@@ -43,7 +43,7 @@ function PathwaysSVG() {
         document.addEventListener('mouseout', handleMouseLeave);
 
         const handleScroll = () => {
-            if (window.innerWidth > 480 && isTooltip && document.getElementById("rect-first").getBoundingClientRect().top >= window.innerHeight) {
+            if (window.innerWidth > 480 && isTooltip && document.getElementById("rect-first").getBoundingClientRect().top >= window.innerHeight - 200) {
                 ['text-first-1', 'text-box-first-1', 'pointer-first-1'].forEach((elementId) => {
                     const element = document.getElementById(elementId);
                     element?.classList.remove('hide-1');
