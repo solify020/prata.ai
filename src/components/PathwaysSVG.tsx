@@ -49,7 +49,7 @@ function PathwaysSVG() {
                 if (elementGroup.length > 0) {
                     const rect = elementGroup[0].getBoundingClientRect(); // Get element position
 
-                    if (rect.top <= 200 && rect.top != 0) {
+                    if (rect.top <= 450 && rect.top != 0) {
                         Array.from(elementGroup).forEach((element) => {
                             element.classList.remove("mobile-hide");
                             element.classList.add("mobile-show");
