@@ -90,7 +90,7 @@
     <rect x="440" y="200" width="40" height="40" fill="#818181"></rect>
     <rect width="40" height="40" transform="translate(440 240)" fill="#818181"
         id="rect-second-orange" class="second-orange"></rect>
-    <circle cx="460" cy="260" r="10" fill="#FF5900" pointer="elipse-second-orange"
+    <circle cx="460" cy="260" r="10" fill="#FF5900" id="elipse-second-orange"
         class="second-orange"></circle>
     <rect width="365.457" height="36.2286" transform="translate(1032 112)" fill="#F9A900"
         id="text-box-fifth-yellow"></rect>

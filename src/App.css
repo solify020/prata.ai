@@ -28,6 +28,7 @@
 [id^="text-box-"],
 [id^="text-"] {
     opacity: 0;
+    display: none;
 }
 
 .always-show {
@@ -41,7 +42,7 @@
 }
 
 .hide {
-    display: block;
+    display: none;
     animation: fade-out 0.2s forwards;
 }
 
@@ -61,18 +62,22 @@
 @keyframes fade-in {
     from {
         opacity: 0;
+        max-height: 0px !important;
     }
     to {
         opacity: 1;
+        max-height: 200px !important;
     }
 }
 
 @keyframes fade-out {
     from {
         opacity: 1;
+        max-height: 200px !important;
     }
     to {
         opacity: 0;
+        max-height: 0px !important;
     }
 }
 
