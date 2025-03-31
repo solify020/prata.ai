@@ -49,14 +49,16 @@ function PathwaysSVG() {
                 if (elementGroup.length > 0) {
                     const rect = elementGroup[0].getBoundingClientRect(); // Get element position
 
-                    if (rect.top <= 450 && rect.top != 0) {
+                    if (rect.top <= window.innerHeight / 2 && rect.top != 0) {
                         Array.from(elementGroup).forEach((element) => {
                             element.classList.remove("mobile-hide");
                             element.classList.add("mobile-show");
+                            element.classList.add("fade-in");
                         });
                     } else {
                         Array.from(elementGroup).forEach((element) => {
                             element.classList.remove("mobile-show");
+                            element.classList.remove("fade-in");
                             element.classList.add("mobile-hide");
                         });
                     }

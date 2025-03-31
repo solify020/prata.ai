@@ -54,6 +54,10 @@
     opacity: 1;
 }
 
+.fade-in {
+    animation: fade-in 0.2s forwards;
+}
+
 .mobile-hide {
     opacity: 0;
 }
