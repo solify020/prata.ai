@@ -27,17 +27,26 @@
 [id^="pointer-"],
 [id^="text-box-"],
 [id^="text-"] {
-    display: none;
+    opacity: 0;
 }
 
-#text-first,
-#text-box-first,
-#pointer-first {
+.always-show {
     display: block !important;
+    opacity: 1 !important;
 }
 
 .show {
     display: block;
+    animation: fade-in 0.2s forwards;
+}
+
+.hide {
+    display: block;
+    animation: fade-out 0.2s forwards;
+}
+
+.hide-1 {
+    display: none !important;
 }
 
 @media screen and (max-width: 479px) {
@@ -46,6 +55,24 @@
     }
     .how_svg.is-mob-hide {
         display: none;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }
 
