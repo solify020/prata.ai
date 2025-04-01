@@ -4,7 +4,6 @@
 import React, { useState, useEffect } from "react"; // Dodano importy React
 import { Mic, Loader2, Square } from "lucide-react"; // Dodano ikonę Square dla stanu aktywnego
 import { cn } from "@/lib/utils";
-import Recording from './recording.gif'
 
 // Nowy interfejs propsów - sterowany z zewnątrz
 interface AIVoiceInputDemoProps {
@@ -38,58 +37,65 @@ export function AIVoiceInputDemo({
 
   // Wybierz ikonę na podstawie stanu Vapi
   const getIcon = () => {
-    if (isLoading) return <Loader2 className="w-12 h-12 animate-spin" />;
+    if (isLoading) return <Loader2 className="w-6 h-6 animate-spin" />;
     // Jeśli aktywne, pokaż ikonę kwadratu do zatrzymania
-    if (isActive) return <img src={Recording} className="w-full h-full text-white/70" />; // Używamy kwadratu
+    if (isActive) return <Square className="w-6 h-6 text-white/70" fill="currentColor" />; // Używamy kwadratu
     // Domyślnie ikona mikrofonu
-    return <Mic className="w-12 h-12 text-white/70" />;
+    return <Mic className="w-6 h-6 text-white/70" />;
   };
 
   return (
-    <div className={cn("w-full py-4 flex flex-col items-center gap-2", className)}> {/* Dodano flex-col i gap */}
-      {/* Przycisk - teraz sterowany przez zewnętrzne propsy */}
+    <div className={cn("w-full py-6 flex flex-col items-center gap-4", className)}> {/* Zwiększono odstępy dla lepszej estetyki */}
+      {/* Przycisk - teraz bardziej elegancki */}
       <button
-        className={cn(
-          "group w-24 h-24 rounded-xl flex items-center justify-center transition-all duration-300", // Zmieniono na bardziej neutralne tło, usunięto warunek submitte
-        )}
-        type="button"
-        onClick={onClick}
-        disabled={disabled || isLoading}
-        aria-label={isLoading ? "Ansluter..." : isActive ? "Avsluta samtal" : "Starta samtal"} // Dynamiczna etykieta
+      className={cn(
+        "group relative w-20 h-20 rounded-full flex items-center justify-center transition-all duration-300 shadow-lg", // Dodano cień dla przycisku
+        "bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:opacity-90", // Gradientowe tło
+        isActive && "from-red-500 via-red-600 to-red-700 hover:opacity-90", // Czerwony gradient gdy aktywny
+        disabled && "opacity-50 cursor-not-allowed" // Styl dla wyłączonego
+      )}
+      type="button"
+      onClick={onClick}
+      disabled={disabled || isLoading}
+      aria-label={isLoading ? "Ansluter..." : isActive ? "Avsluta samtal" : "Starta samtal"} // Dynamiczna etykieta
       >
-        {getIcon()}
+      <div
+        className={cn(
+        "absolute w-24 h-24 rounded-full border-4 border-white/30",
+        "transition-transform",
+        isActive ? "animate-spin-fast" : "animate-spin-slow"
+        )}
+      />
+      {getIcon()}
       </button>
 
-      {/* Timer - Usunięty, bo nie jest już relevantny */}
-      {/* <span className="font-mono text-sm ...">{formatTime(time)}</span> */}
-
-      {/* Wizualizer - animowany, gdy połączenie jest aktywne LUB gdy nagrywa */}
-      <div className="h-6 w-64 flex items-center justify-center gap-1">
-        {[...Array(visualizerBars)].map((_, i) => (
-          <div
+      {/* Wizualizer - bardziej dynamiczny */}
+      <div className="h-6 w-72 flex items-center justify-center gap-1"> {/* Zwiększono wysokość i szerokość */}
+      {[...Array(visualizerBars)].map((_, i) => (
+        <div
         key={i}
         className={cn(
-          "w-1 rounded-full transition-all duration-500 ease-in-out",
-          (isActive || isRecording)
-            ? "bg-gradient-to-t from-blue-500 via-purple-500 to-pink-500 animate-bounce"
-            : "bg-gradient-to-t from-gray-500 via-gray-400 to-gray-300" // Piękny gradient dla nieaktywnych
+          "w-1 rounded-full transition-all duration-300",
+          (isActive || isRecording) // Animuj, gdy połączenie jest aktywne LUB nagrywa
+          ? "bg-gradient-to-t from-blue-400 via-purple-400 to-pink-400 animate-pulse" // Gradientowy styl animacji
+          : "bg-white/10 h-2" // Styl nieaktywny
         )}
         style={
-          (isActive || isRecording) && isClient
-            ? {
-            height: `${20 + Math.random() * 80}%`,
-            animationDelay: `${i * 0.1}s`,
-            animationDuration: '1.2s',
-          }
-            : { height: '0.5rem' }
+          (isActive || isRecording) && isClient // Animuj tylko po stronie klienta
+          ? {
+            height: `${20 + Math.random() * 80}%`, // Większa wysokość animacji
+            animationDelay: `${i * 0.03}s`,
+            animationDuration: '1.2s' // Szybsza animacja
+            }
+          : { height: '0.5rem' } // Minimalna wysokość w stanie nieaktywnym
         }
-          />
-        ))}
+        />
+      ))}
       </div>
 
-      {/* Tekst Statusu - teraz pobierany z propsów */}
-      <p className="h-4 text-xs text-white/70 mt-1"> {/* Dodano mt-1 */}
-        {statusText}
+      {/* Tekst Statusu - bardziej widoczny */}
+      <p className="h-6 text-sm text-white/80 mt-2 font-medium text-center"> {/* Zwiększono rozmiar tekstu i dodano wyrównanie */}
+      {statusText}
       </p>
     </div>
   );
