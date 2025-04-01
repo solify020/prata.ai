@@ -4,6 +4,7 @@
 import React, { useState, useEffect } from "react"; // Dodano importy React
 import { Mic, Loader2, Square } from "lucide-react"; // Dodano ikonę Square dla stanu aktywnego
 import { cn } from "@/lib/utils";
+import Recording from './recording.gif'
 
 // Nowy interfejs propsów - sterowany z zewnątrz
 interface AIVoiceInputDemoProps {
@@ -37,11 +38,11 @@ export function AIVoiceInputDemo({
 
   // Wybierz ikonę na podstawie stanu Vapi
   const getIcon = () => {
-    if (isLoading) return <Loader2 className="w-6 h-6 animate-spin" />;
+    if (isLoading) return <Loader2 className="w-12 h-12 animate-spin" />;
     // Jeśli aktywne, pokaż ikonę kwadratu do zatrzymania
-    if (isActive) return <Square className="w-6 h-6 text-white/70" fill="currentColor" />; // Używamy kwadratu
+    if (isActive) return <img src={Recording} className="w-full h-full text-white/70" />; // Używamy kwadratu
     // Domyślnie ikona mikrofonu
-    return <Mic className="w-6 h-6 text-white/70" />;
+    return <Mic className="w-12 h-12 text-white/70" />;
   };
 
   return (
@@ -49,10 +50,7 @@ export function AIVoiceInputDemo({
       {/* Przycisk - teraz sterowany przez zewnętrzne propsy */}
       <button
         className={cn(
-          "group w-16 h-16 rounded-xl flex items-center justify-center transition-all duration-300", // Zmieniono na bardziej neutralne tło, usunięto warunek submitted
-          "bg-white/5 hover:bg-white/10", // Lekkie tło
-          isActive && "bg-red-500/20 hover:bg-red-500/30", // Czerwona poświata gdy aktywny
-          disabled && "opacity-50 cursor-not-allowed" // Styl dla wyłączonego
+          "group w-24 h-24 rounded-xl flex items-center justify-center transition-all duration-300", // Zmieniono na bardziej neutralne tło, usunięto warunek submitte
         )}
         type="button"
         onClick={onClick}
@@ -66,25 +64,25 @@ export function AIVoiceInputDemo({
       {/* <span className="font-mono text-sm ...">{formatTime(time)}</span> */}
 
       {/* Wizualizer - animowany, gdy połączenie jest aktywne LUB gdy nagrywa */}
-      <div className="h-4 w-64 flex items-center justify-center gap-0.5">
+      <div className="h-6 w-64 flex items-center justify-center gap-1">
         {[...Array(visualizerBars)].map((_, i) => (
           <div
-            key={i}
-            className={cn(
-              "w-0.5 rounded-full transition-all duration-300",
-              (isActive || isRecording) // Animuj, gdy połączenie jest aktywne LUB nagrywa
-                ? "bg-white/50 animate-pulse" // Styl animacji pulsującej
-                : "bg-white/10 h-1" // Styl nieaktywny
-            )}
-            style={
-              (isActive || isRecording) && isClient // Animuj tylko po stronie klienta
-                ? {
-                    height: `${10 + Math.random() * 60}%`, // Mniejsza wysokość animacji
-                    animationDelay: `${i * 0.05}s`,
-                    animationDuration: '1.5s' // Wolniejsza animacja
-                  }
-                : { height: '0.25rem' } // Zapewnij minimalną wysokość w stanie nieaktywnym
-            }
+        key={i}
+        className={cn(
+          "w-1 rounded-full transition-all duration-500 ease-in-out",
+          (isActive || isRecording)
+            ? "bg-gradient-to-t from-blue-500 via-purple-500 to-pink-500 animate-bounce"
+            : "bg-gradient-to-t from-gray-500 via-gray-400 to-gray-300" // Piękny gradient dla nieaktywnych
+        )}
+        style={
+          (isActive || isRecording) && isClient
+            ? {
+            height: `${20 + Math.random() * 80}%`,
+            animationDelay: `${i * 0.1}s`,
+            animationDuration: '1.2s',
+          }
+            : { height: '0.5rem' }
+        }
           />
         ))}
       </div>

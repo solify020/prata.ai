@@ -64,9 +64,9 @@ function PathwaysSVG() {
                         // Hide the previously visible tooltip
                         if (lastVisibleElement && lastVisibleElement !== elementGroup[0]) {
                             Array.from(lastVisibleElement).forEach((element) => {
-                                element?.classList.remove('mobile-show');
-                                element?.classList.remove('fade-in');
-                                element?.classList.add('mobile-hide');
+                                (element as HTMLElement)?.classList.remove('mobile-show');
+                                (element as HTMLElement)?.classList.remove('fade-in');
+                                (element as HTMLElement)?.classList.add('mobile-hide');
                             });
                         }
 
